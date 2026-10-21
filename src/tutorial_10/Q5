@@ -1,0 +1,25 @@
+% Facts
+python(arun).
+python(bala).
+python(charan).
+data_structures(arun).
+data_structures(charan).
+data_structures(divya).
+% Rule
+eligible(Student) :-
+    python(Student),
+    data_structures(Student).
+/* Queries
+?- eligible(X).
+Output:
+X = arun ;
+X = charan.
+?- eligible(arun).
+true.
+?- eligible(bala).
+false.
+?- eligible(charan).
+true.
+?- eligible(divya).
+false.
+*/

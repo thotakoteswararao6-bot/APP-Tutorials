@@ -1,0 +1,13 @@
+from functools import reduce   #to build this code in python code
+marks=[45,78,92,35,60,49,88]
+passed=list(filter(lambda x: x >=50,marks))
+print("students scoring 50 and above:",passed)
+grace =list(map(lambda x:min(x +5,100), marks))
+print("marks after adding grace marks:",grace)
+total =reduce(lambda x, y: x + y, marks)
+print("Total Marks:", total)
+print("\nExplanation:")
+print("filter() selects students with marks 50 or above.")
+print("map() adds 5 grace marks without exceeding 100.")
+print("reduce() calculates the total marks.")
+print("Lambda functions make the code short and simple.")

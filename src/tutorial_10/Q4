@@ -1,0 +1,15 @@
+from functools import reduce
+units = [8,12,15,7,10,13]
+high = list(filter(lambda x: x > 10, units))
+print("Days with consumption above 10 units:", high)
+cost = list(map(lambda x: x *6, units))
+print("Daily Electricity Cost:",cost)
+total = reduce(lambda x, y: x + y, units)
+print("Total Units Consumed:", total)
+def calculate_bill(data):
+    return list(map(lambda x: x * 6, data))
+bill = calculate_bill(units)
+print("Electricity bill:",bill)
+print("\nExplanation:")
+print("calculate_bill() is a pure function because it does not modify the original list.")
+

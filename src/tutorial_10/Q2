@@ -1,0 +1,13 @@
+from functools import reduce
+salary = [25000,45000,38000,50000,30000]
+eligible = list(filter(lambda x: x < 40000,salary))
+print("Employees eligible for increment:",eligible)
+revised = list(map(lambda x: x *1.10 if x <40000 else x,salary))
+print("Revised Salaries:",revised)
+total = reduce(lambda x,y: x + y,revised)
+print("Total Salary expenditure:",total)
+print("\nExplanation:")
+print("filter() finds employees earning below 40000")
+print("map() gives a 10% increment")
+print("reduce() calculates the total salary")
+print("Functional programming processes records without changing the original data")
